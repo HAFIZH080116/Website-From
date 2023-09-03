@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran SMK 2 Kota</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #6A5ACD;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 120px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Pendaftaran SMK 2 Kota</h2>
+        <form id="registrationForm">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+
+            <label for="email">Alamat Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="jenis_kelamin">Jenis Kelamin:</label>
+            <select id="jenis_kelamin" name="jenis_kelamin" required>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+
+            <label for="jurusan">Jurusan Pilihan:</label>
+            <select id="jurusan" name="jurusan" required>
+                <option value="Animasi">Animasi</option>
+                <option value="Akuntansi dan Keuangan Lembaga">Akuntansi dan Keuangan Lembaga</option>
+                <option value="Pemasaran">Pemasaran</option>
+                <option value="Manajemen Perkantoran dan Layanan Bisnis">Manajemen Perkantoran dan Layanan Bisnis</option>
+                <option value="Usaha Layanan Pariwisata">Usaha Layanan Pariwisata</option>
+                <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                <option value="Broadcasting dan Perfilman">Broadcasting dan Perfilman</option>
+                <option value="Pengembangan Perangkat Lunak dan Gim">Pengembangan Perangkat Lunak dan Gim</option>
+                <option value="Teknik Jaringan Komputer Dan Telekomunikasi">Teknik Jaringan Komputer Dan Telekomunikasi</option>
+            </select>
+
+            <input type="submit" value="Daftar">
+        </form>
+    </div>
+
+    <script>
+     
+     <form id="registrationForm" action="https://formspree.io/lenovopf3scxav@outlook.com" method="POST">
+    <!-- Konten formulir di sini -->
+    <input type="submit" value="Daftar">
+</form>
+
+        document.getElementById("registrationForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // Mendapatkan data dari formulir
+            var nama = document.getElementById("nama").value;
+            var alamat = document.getElementById("alamat").value;
+            var email = document.getElementById("email").value;
+            var jenisKelamin = document.getElementById("jenis_kelamin").value;
+            var jurusan = document.getElementById("jurusan").value;
+
+            alert("Data yang dikirim:\nNama: " + nama + "\nAlamat: " + alamat + "\nEmail: " + email + "\nJenis Kelamin: " + jenisKelamin + "\nJurusan: " + jurusan);
+        });
+    </script>
+</body>
+</html>
